@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfSEM02.Views.SalidaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registro de Salidas" Height="500" Width="450"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Tipo Documento:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+        <ComboBox x:Name="cmbTipoDocumento" Grid.Row="0" Grid.Column="1" Margin="0,5">
+            <ComboBoxItem Content="DNI"/>
+            <ComboBoxItem Content="RUC"/>
+            <ComboBoxItem Content="Carnet Extranjería"/>
+        </ComboBox>
+
+        <TextBlock Text="N° Documento:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtNumeroDocumento" Grid.Row="1" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Placa:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtPlaca" Grid.Row="2" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Turno:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+        <ComboBox x:Name="cmbTurno" Grid.Row="3" Grid.Column="1" Margin="0,5">
+            <ComboBoxItem Content="Mañana"/>
+            <ComboBoxItem Content="Tarde"/>
+            <ComboBoxItem Content="Noche"/>
+        </ComboBox>
+
+        <TextBlock Text="Nombre Conductor:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtNombreConductor" Grid.Row="4" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Nombre Cliente:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtNombreCliente" Grid.Row="5" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Fecha y Hora:" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+        <DatePicker x:Name="dpFechaHora" Grid.Row="6" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Peso de Salida:" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtPesoSalida" Grid.Row="7" Grid.Column="1" Margin="0,5"/>
+
+        <Button x:Name="btnGuardar" Content="Guardar" Grid.Row="8" Grid.Column="1"
+                HorizontalAlignment="Right" Width="100" Height="30" Margin="0,15,0,0"
+                Click="btnGuardar_Click"/>
+    </Grid>
+</Window>

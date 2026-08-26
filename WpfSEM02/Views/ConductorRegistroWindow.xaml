@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfSEM02.Views.ConductorRegistroWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registro de Conductor" Height="280" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Nombre Conductor:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtNombreConductor" Grid.Row="0" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Licencia:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtLicencia" Grid.Row="1" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Transporte:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtTransporte" Grid.Row="2" Grid.Column="1" Margin="0,5"/>
+
+        <Button x:Name="btnGuardar" Content="Guardar" Grid.Row="3" Grid.Column="1"
+                HorizontalAlignment="Right" Width="100" Height="30" Margin="0,15,0,0"
+                Click="btnGuardar_Click"/>
+    </Grid>
+</Window>
